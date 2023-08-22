@@ -20,6 +20,15 @@ document.addEventListener ("keypress" , function() {
     }
 });
 
+body.addEventListener ("click" , function() {
+    if(started == false) {
+      console.log("Game is started")
+      started = true;
+
+      levelUp();
+    }
+});
+
 function btnFlash(btn) {  //btn need to be flashed will come as an argument
     btn.classList.add("flash");
     setTimeout(function() {  /// after 1sec "flash" class will be removed
